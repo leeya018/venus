@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Hero() {
   return (
-    <div className="flex justify-center mx-20 text-gray-700 mt-10">
+    <div className="flex justify-center  text-gray-700 mt-10">
       <div className="flex flex-col justify-center gap-8 ">
         <div className="font-bold text-4xl lg:text-7xl">
           Experts in Relocation Services in Spain
