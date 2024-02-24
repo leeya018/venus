@@ -3,7 +3,7 @@ import React from "react"
 
 export default function Navbar() {
   return (
-    <nav className=" p-4 flex items-center justify-between">
+    <nav className=" p-4 flex items-center justify-between ">
       <div className="flex items-center gap-3">
         <Image src={"/images/logo.png"} alt="logo" width={170} height={80} />
         <Image
