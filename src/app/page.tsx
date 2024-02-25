@@ -1,3 +1,4 @@
+import Clients from "@/components/clients"
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
 import Services from "@/components/services"
@@ -14,6 +15,8 @@ export default function homePage() {
         <Hero />
         {/* relocation serivces */}
         <Services />
+        {/* our clients */}
+        <Clients />
       </div>
     </div>
   )
