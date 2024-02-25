@@ -1,109 +1,75 @@
 "use client"
 import Image from "next/image"
 import React, { useState } from "react"
-import data from "@/data"
+import services from "@/data"
+import { GiConfirmed } from "react-icons/gi"
 
-const services = {
-  RELOCATION: "RELOCATION",
-  IMMIGRATION: "IMMIGRATION",
-  TAX_ADVICE: "TAX ADVICE",
-  CONSULTING: "CONSULTING",
-  LANGUAGE_TRAINING: "LANGUAGE TRAINING",
-}
+const serviceKeys = Object.keys(services)
 
 export default function Services() {
-  const [nav, setNav] = useState(services.RELOCATION)
-  console.log({ data })
+  const [nav, setNav] = useState<string>(serviceKeys[0])
+  const [chosenService, setChosenService] = useState<any>(
+    services[serviceKeys[0]]
+  )
+  console.log({ chosenService })
   return (
     <div>
-      <div className="font-bold text-4xl lg:text-7xl">
-        Experts in Relocation Services in Spain
+      <div className="font-bold text-4xl lg:text-7xl mt-20">
+        Experts in Relocation serviceNames in Spain
       </div>
       {/* list  */}
       <ul className="mt-5 flex flex-col gap-2 list-none text-lg font-bold lg:flex lg:items-center lg:justify-center lg:gap-2 lg:text-xl lg:font-bold lg:flex-row  ">
-        <li
-          onClick={() => setNav(services.RELOCATION)}
-          className={`${
-            nav === services.RELOCATION
-              ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
-              : "text-gray-700"
-          } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
-        >
-          <div className="">{services.RELOCATION}</div>
-        </li>
-        <li
-          onClick={() => setNav(services.IMMIGRATION)}
-          className={`${
-            nav === services.IMMIGRATION
-              ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
-              : "text-gray-700"
-          } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
-        >
-          <div className="">{services.IMMIGRATION}</div>
-        </li>
-        <li
-          onClick={() => setNav(services.TAX_ADVICE)}
-          className={`${
-            nav === services.TAX_ADVICE
-              ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
-              : "text-gray-700"
-          } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
-        >
-          <div className="">{services.TAX_ADVICE}</div>
-        </li>
-        <li
-          onClick={() => setNav(services.CONSULTING)}
-          className={`${
-            nav === services.CONSULTING
-              ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
-              : "text-gray-700"
-          } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
-        >
-          <div className="">{services.CONSULTING}</div>
-        </li>
-        <li
-          onClick={() => setNav(services.LANGUAGE_TRAINING)}
-          className={`${
-            nav === services.LANGUAGE_TRAINING
-              ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
-              : "text-gray-700"
-          } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
-        >
-          <div className="">{services.LANGUAGE_TRAINING}</div>
-        </li>
+        {Object.values(services).map((service, key) => (
+          <li
+            key={key}
+            onClick={() => {
+              setNav(serviceKeys[key])
+              setChosenService(service)
+            }}
+            className={`${
+              nav === serviceKeys[key]
+                ? "text-pink-500 lg:border-pink-500 lg:border-[3px]"
+                : "text-gray-700"
+            } cursor-pointer   lg:px-6 lg:py-3 lg:rounded-lg`}
+          >
+            <div className="">{service.name}</div>
+          </li>
+        ))}
       </ul>
+
       {/* the service */}
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row mt-20 ">
         <div className="flex-1">
           <Image
-            src={"/images/relocation_txt.png"}
+            src={chosenService.url}
             alt="relocation_txt"
-            width={170}
-            height={80}
+            width={500}
+            height={500}
+            className="object-cover"
           />
         </div>
 
         <div className="flex-1 mt-10">
           <div className="font-light text-2xl text-teal-500 ">
-            LANGUAGE TRAINING
+            {chosenService.name}
           </div>
-          <div className="font-bold text-3xl mt-5">
-            Language Training Service
+          <div className="font-bold text-3xl mt-5">{chosenService.title}</div>
+          <div className="mt-16 font-semibold text-xl text-gray-500">
+            {chosenService.subtitle}
           </div>
-          <div className="mt-16 font-semibold text-xl ">
-            “A different language is a different vision of life” — Federico
-            Fellini
+          <div className="mt-8 font-semibold tracking-wide text-xl text-gray-500">
+            {chosenService.text}
           </div>
-          <div className="mt-8 font-semibold tracking-wide text-xl">
-            Knowing the language of the destination country is key to the
-            success of an international assignment both on a professional and a
-            personal level. We believe language learning is both an enriching
-            experience and a practical tool. That is why we offer a language
-            training program for professionals that combines theoretical and
-            practical exercises. The training is flexible in order to adapt to
-            the dynamic schedules of busy professionals. Our aim is to make the
-            acquisition of the new language valued and fun!
-          </div>
+          <ul className="flex flex-col gap-5 text-lg font-semibold mt-8 ">
+            {chosenService.list.map((item: string, key: number) => (
+              <li key={key} className="flex items-center gap-5">
+                <div className="text-pink-500">
+                  <GiConfirmed size={30} />
+                </div>
+                <div>{item}</div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
