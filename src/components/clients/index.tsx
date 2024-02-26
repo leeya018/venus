@@ -1,5 +1,6 @@
 import Image from "next/image"
 import React from "react"
+import ClientIcon from "../clientIcon"
 
 export default function Clients() {
   return (
@@ -13,71 +14,28 @@ export default function Clients() {
       </div>
       <div>
         <div className="flex items-center justify-around">
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
-
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
-
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
+          <ClientIcon />
+          <ClientIcon />
+          <ClientIcon />
+          <ClientIcon />
         </div>
         <div className="flex items-center justify-around">
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
-
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
+          <ClientIcon />
         </div>
         <div className="flex items-center justify-around">
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
-
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
-
-          <Image
-            src={"cola.svg"}
-            alt="relocation_txt"
-            width={300}
-            height={300}
-            className="object-cover"
-          />
+          <ClientIcon />
+          <ClientIcon />
+          <ClientIcon />
+        </div>
+        <div className="flex items-center justify-around">
+          <ClientIcon />
+          <ClientIcon />
+        </div>
+        <div className="flex items-center justify-around">
+          <ClientIcon />
+          <ClientIcon />
+          <ClientIcon />
+          <ClientIcon />
         </div>
       </div>
     </div>
