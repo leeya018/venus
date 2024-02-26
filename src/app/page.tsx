@@ -3,6 +3,7 @@ import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
 import Profits from "@/components/profits"
 import Services from "@/components/services"
+import Team from "@/components/team"
 import Image from "next/image"
 import React from "react"
 
@@ -20,6 +21,8 @@ export default function homePage() {
         <Clients />
         {/* profits */}
         <Profits />
+        {/* team */}
+        <Team />
       </div>
     </div>
   )
