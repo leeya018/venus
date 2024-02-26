@@ -13,25 +13,13 @@ export default function Clients() {
         serve:
       </div>
       <div>
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-around flex-wrap">
           <ClientIcon />
           <ClientIcon />
           <ClientIcon />
           <ClientIcon />
-        </div>
-        <div className="flex items-center justify-around">
-          <ClientIcon />
-        </div>
-        <div className="flex items-center justify-around">
           <ClientIcon />
           <ClientIcon />
-          <ClientIcon />
-        </div>
-        <div className="flex items-center justify-around">
-          <ClientIcon />
-          <ClientIcon />
-        </div>
-        <div className="flex items-center justify-around">
           <ClientIcon />
           <ClientIcon />
           <ClientIcon />
