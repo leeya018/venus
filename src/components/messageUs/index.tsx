@@ -2,9 +2,9 @@ import React from "react"
 
 export default function MessageUs() {
   return (
-    <div className="bg-teal-400 text-white flex flex-col px-10 py-10 mt-20">
+    <div className="bg-teal-400 text-white flex flex-col px-10 py-10 mt-20 md:flex-row">
       {/* first */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 md:flex-1">
         <div className="text-2xl">CONTACT</div>
         <div className="text-3xl font-semibold tracking-wider">
           Try our services
@@ -18,7 +18,7 @@ export default function MessageUs() {
         </div>
       </div>
       {/* second */}
-      <div className="mt-10 flex flex-col gap-4 ">
+      <div className="mt-10 flex flex-col gap-4 md:flex-1">
         <input
           type="text"
           className="w-full rounded-md bg-white px-4 h-16 text-lg text-gray-700 "

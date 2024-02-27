@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar"
 import Profits from "@/components/profits"
 import Services from "@/components/services"
 import Team from "@/components/team"
+import Offices from "@/components/offices"
 import Image from "next/image"
 import React from "react"
 
@@ -27,6 +28,8 @@ export default function homePage() {
       </div>
       {/* message us */}
       <MessageUs />
+      {/* offices */}
+      <Offices />
     </div>
   )
 }

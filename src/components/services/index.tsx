@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import React, { useState } from "react"
-import services from "@/data"
+import services from "@/components/services/data"
 import { GiConfirmed } from "react-icons/gi"
 
 const serviceKeys = Object.keys(services)
