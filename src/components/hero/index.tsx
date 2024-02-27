@@ -16,7 +16,7 @@ export default function Hero() {
           offering our clients a unique and personalized experience, satisfying
           the needs of executives, individuals, and families.
         </div>
-        <button className="text-white bg-pink-600 py-3 px-8 font-bold text-xl rounded-full w-48">
+        <button className="text-white hover:bg-pink-500 bg-pink-600 py-3 px-8 font-bold text-xl rounded-full w-48">
           Contact us
         </button>
         <div className="flex justify-center  ">

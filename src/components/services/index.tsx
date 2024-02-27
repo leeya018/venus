@@ -14,7 +14,7 @@ export default function Services() {
   console.log({ chosenService })
   return (
     <div>
-      <div className="font-bold text-4xl lg:text-7xl mt-20">
+      <div className="font-bold  text-4xl lg:text-7xl mt-20">
         Experts in Relocation serviceNames in Spain
       </div>
       {/* list  */}

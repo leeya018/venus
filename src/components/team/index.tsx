@@ -7,7 +7,7 @@ export default function Team() {
   return (
     <div>
       {/* first section */}
-      <div className="flex flex-col lg:flex-row mt-20">
+      <div className="flex  flex-col lg:flex-row mt-20">
         <div className="flex-1 mt-10 mr-10 ">
           <Image
             src={"/images/people.jpg"}

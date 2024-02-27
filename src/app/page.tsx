@@ -1,5 +1,6 @@
 import Clients from "@/components/clients"
 import Hero from "@/components/hero"
+import MessageUs from "@/components/messageUs"
 import Navbar from "@/components/navbar"
 import Profits from "@/components/profits"
 import Services from "@/components/services"
@@ -24,6 +25,8 @@ export default function homePage() {
         {/* team */}
         <Team />
       </div>
+      {/* message us */}
+      <MessageUs />
     </div>
   )
 }

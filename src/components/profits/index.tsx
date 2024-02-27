@@ -4,7 +4,7 @@ import React from "react"
 export default function Profits() {
   return (
     <div>
-      <div className="flex md:justify-center font-bold text-6xl tracking-wider mt-5">
+      <div className="flex  md:justify-center font-bold text-6xl tracking-wider mt-5">
         What do you get with eres?
       </div>
       <div className="flex md:justify-center mt-16 font-semibold text-2xl tracking-wider ">

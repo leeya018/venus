@@ -4,7 +4,7 @@ import ClientIcon from "../clientIcon"
 
 export default function Clients() {
   return (
-    <div className="flex flex-col gap-5 mt-20">
+    <div className="flex  flex-col gap-5 mt-20">
       <div className="font-bold text-3xl mt-5">Our clients</div>
       <div className="mt-16 font-semibold text-xl text-gray-500">
         The depth and breadth of our experience allows us to serve all types of
