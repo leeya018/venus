@@ -5,12 +5,8 @@ export default function Navbar() {
   return (
     <nav className=" p-4 flex items-center justify-between ">
       <div className="flex items-center gap-3">
-        <Image src={"/images/logo.png"} alt="logo" width={170} height={80} />
-        <Image
-          src={"/images/relocation_txt.png"}
-          alt="relocation_txt"
-          width={170}
-          height={80}
+        <div
+          className={`bg-no-repeat bg-center bg-contain bg-relocation h-20 w-20 md:h-32 md:w-32 `}
         />
       </div>
       <div className="flex items-center gap-3">

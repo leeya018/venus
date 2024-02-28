@@ -12,7 +12,7 @@ import React from "react"
 
 export default function homePage() {
   return (
-    <div className="w-screen min-w-screen text-gray-700">
+    <div className="max-w-full text-gray-700">
       {/* navbar */}
       <Navbar />
       <div className="mx-20">

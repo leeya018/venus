@@ -18,6 +18,8 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
+        hero: "url('/images/hero.jpg')",
+        relocation: "url('/images/relocation_txt.png')",
         cola: "url('/cola.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

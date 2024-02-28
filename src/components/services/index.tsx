@@ -18,7 +18,11 @@ export default function Services() {
         Experts in Relocation serviceNames in Spain
       </div>
       {/* list  */}
-      <ul className="mt-5 flex flex-col gap-2 list-none text-lg font-bold lg:flex lg:items-center lg:justify-center lg:gap-2 lg:text-xl lg:font-bold lg:flex-row  ">
+      <ul
+        className="mt-5 flex flex-col gap-2 list-none text-lg
+       font-bold lg:flex lg:items-center lg:justify-center lg:gap-2 lg:text-xl 
+       lg:font-bold lg:flex-row  "
+      >
         {Object.values(services).map((service, key) => (
           <li
             key={key}
@@ -38,7 +42,7 @@ export default function Services() {
       </ul>
 
       {/* the service */}
-      <div className="flex flex-col lg:flex-row mt-20 ">
+      <div className="flex flex-col lg:flex-row mt-20 gap-10 ">
         <div className="flex-1">
           <Image
             src={chosenService.url}

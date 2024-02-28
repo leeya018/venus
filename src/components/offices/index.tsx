@@ -9,7 +9,7 @@ export default function Offices() {
       <div className="font-semibold text-2xl">Where can you find us?</div>
       {/* cards */}
       <ul className="flex justify-around items-center">
-        {data.map((card: LocationCard, key: number) => (
+        {data.slice(2).map((card: LocationCard, key: number) => (
           <li key={key} className="font-semibold flex flex-col shadow-xl p-5">
             <Image
               src={"./images/location_arrow.svg"}
